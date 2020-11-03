@@ -1,0 +1,22 @@
+{
+  "name": "9_readmegenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tutchings/9_readmeGenerator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tutchings/9_readmeGenerator/issues"
+  },
+  "homepage": "https://github.com/tutchings/9_readmeGenerator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
