@@ -1,7 +1,7 @@
 
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
-# asdf
-## Project Creators: asd
+# Readme Generator
+## Project Creators: Thomas Tutchings
 
 <br />
 
@@ -18,31 +18,31 @@
 
 #### Description
 
-*fsad*
+*Generates a Readme file based on user input to prompts.*
 
 <br />
 
 #### Installation
 
-*fsad*
+*npm i*
 
 <br />
 
 #### Usage
 
-*asd*
+*n/a*
 
 <br />
 
 #### Contribution Guidelines
 
-*asdf*
+*n/a*
 
 <br />
 
 #### Testing
 
-*fsadf*
+*npm test*
 
 <br />
 
@@ -56,7 +56,7 @@ https://opensource.org/licenses/MIT
 
 *If you have any questions, feel free to reach out to me via GitHub or Email, listed below:*
 
-**Github:** [asdf](https://github.com/asdf) 
+**Github:** [tutchings](https://github.com/tutchings) 
 
-**Email: asdf**
+**Email: tutchings.dev@gmail.com**
     

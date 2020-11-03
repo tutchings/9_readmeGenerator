@@ -1,9 +1,12 @@
+//node requires
 const fs = require('fs');
 const inquirer = require('inquirer');
 const util = require('util');
 
+//promisify write file
 const writeReadme = util.promisify(fs.writeFile);
 
+//global variable declarations
 let badgeImg;
 let badgeUrl;
 const licenseArray = ['MIT', 'GPLv2', 'GPLv3', 'Apache', 'Other', 'None'];
@@ -30,6 +33,7 @@ const licenseBadges = [
     }
 ]
 
+//prompts function that uses inquirer to ask the user a series of questions
 const prompts = () => {
     return inquirer.prompt([
         {
@@ -70,7 +74,7 @@ const prompts = () => {
         },
         {
             type: 'input',
-            message: 'Please provide any contribution guidelines for this project:',
+            message: 'Please provide any contribution guidelines for this project if applicable:',
             name: 'contribution'
         },
         {
@@ -86,6 +90,9 @@ const prompts = () => {
     ]);
 } //end function prompts()
 
+
+
+//returns a formatted readme based on user responses to the prompts() function
 const generateReadme = (response) => {
     return `
 ![License](${badgeImg})
@@ -153,6 +160,7 @@ ${badgeUrl}
 
 
 
+//determines the badgeImg and badgeUrl based on the user response to the license question in the prompts() function
 const licenseBadge = (response) => {
 
     if(response.license === 'Other'){
@@ -163,7 +171,6 @@ const licenseBadge = (response) => {
         badgeUrl = 'No License';
     } else {
         for (let i = 0; i < licenseBadges.length; i++){
-            console.log(licenseBadges[i].license);
             if(response.license === licenseBadges[i].license){
                 badgeImg = licenseBadges[i].img;
                 badgeUrl = licenseBadges[i].url;
@@ -179,12 +186,17 @@ const licenseBadge = (response) => {
 async function init() {
 
     try {
+
+        //sets response equal to an object formed by the user answers returned from the prompts() function
         const response = await prompts();
 
-        const license = licenseBadge(response);
+        //sets the badgeImg and badgeUrl variables based on user answer to license question returned from the prompts() function
+        licenseBadge(response);
 
+        //passes the response returned from the prompts() function and generates a formatted readme with the data
         const readme = generateReadme(response);
 
+        //creates a readme file with the user's input data
         await writeReadme('README.md', readme);
 
         console.log("Generating README...");
