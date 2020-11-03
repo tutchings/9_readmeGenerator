@@ -4,7 +4,7 @@
 
 ![Readme Generator Demo](https://github.com/tutchings/9_readmeGenerator/blob/master/readmeGeneratorDemo.gif)
 
-## Instructions for Use
+## Installation and Usage Instructions
 
 1. Navigate to the project repo: [Readme Generator](https://github.com/tutchings/9_readmeGenerator)
 
@@ -23,6 +23,10 @@
 8. When all prompts have been answered, a readme file will be generated based on the answers provided to the various prompts
 
 9. Navigate to the project folder to see the newly generated readme file
+
+## Installation Demo
+
+![Installation Demo](https://github.com/tutchings/9_readmeGenerator/blob/master/installationDemo.gif)
 
 ## Your Task
 
