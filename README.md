@@ -18,7 +18,7 @@
 
 #### Description
 
-*Generates a Readme file based on user input to prompts.*
+*This program generates a readme file based on user input to various prompts.*
 
 <br />
 
